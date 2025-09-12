@@ -1,5 +1,4 @@
-const { Calculadora } = require("./calculadora");
-
+import { Calculadora } from "../src/calculadora.js";
 /**
  * Testes da classe Calculadora
  * Cenários:
@@ -16,7 +15,6 @@ let calculadora = new Calculadora(5, 5);
 let calculadora2 = new Calculadora(5, 0);
 
 describe("Testes das operações básicas", () => {
-
   /* ===== TESTE DE SOMA ===== */
   test("Deve somar 5 + 5 corretamente", () => {
     // ===== EXECUÇÃO DO TESTE =====
@@ -49,5 +47,4 @@ describe("Testes das operações básicas", () => {
     let resultado = calculadora2.div();
     expect(resultado).toBe("não é possivel dividir por 0");
   });
-
 });

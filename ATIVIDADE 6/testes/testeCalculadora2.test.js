@@ -1,4 +1,4 @@
-const { Calculadora } = require("./calculadora");
+import { Calculadora } from "../src/calculadora.js";
 
 /* ===== CRIAÇÃO DE CENÁRIO ===== */
 // Objetos de teste com diferentes valores
@@ -10,7 +10,6 @@ let c5 = new Calculadora(100, 20);
 
 /* ===== TESTES DE SOMA ===== */
 describe("TESTES DE SOMA", () => {
-
   test("Soma 10 + 5 = 15", () => {
     // ===== EXECUÇÃO DO TESTE =====
     let resultado = c1.soma();
@@ -38,12 +37,10 @@ describe("TESTES DE SOMA", () => {
     let resultado = c5.soma();
     expect(resultado).toBe(120);
   });
-
 });
 
 /* ===== TESTES DE SUBTRAÇÃO ===== */
 describe("TESTES DE SUBTRAÇÃO", () => {
-
   test("Subtração 10 - 5 = 5", () => {
     let resultado = c1.sub();
     expect(resultado).toBe(5);
@@ -68,12 +65,10 @@ describe("TESTES DE SUBTRAÇÃO", () => {
     let resultado = c5.sub();
     expect(resultado).toBe(80);
   });
-
 });
 
 /* ===== TESTES DE MULTIPLICAÇÃO ===== */
 describe("TESTES DE MULTIPLICAÇÃO", () => {
-
   test("Multiplicação 10 * 5 = 50", () => {
     let resultado = c1.mult();
     expect(resultado).toBe(50);
@@ -98,12 +93,10 @@ describe("TESTES DE MULTIPLICAÇÃO", () => {
     let resultado = c5.mult();
     expect(resultado).toBe(2000);
   });
-
 });
 
 /* ===== TESTES DE DIVISÃO ===== */
 describe("TESTES DE DIVISÃO", () => {
-
   test("Divisão 10 / 5 = 2", () => {
     let resultado = c1.div();
     expect(resultado).toBe(2);
@@ -129,5 +122,4 @@ describe("TESTES DE DIVISÃO", () => {
     let resultado = c5.div();
     expect(resultado).toBe(5);
   });
-
 });
